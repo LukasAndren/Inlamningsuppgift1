@@ -26,24 +26,20 @@ public class Inlamningsuppgift1 {
         hotell.checkaIn(hypno);
 
         //Skapar en sträng som tar emot vilket djur dietcoachen ska mata
-        String input = JOptionPane.showInputDialog("Vilket djur ska få mat?");
+        String input = JOptionPane.showInputDialog("Vilket djur ska få mat?").toLowerCase();
 
         try {
-        //Skapar ett djur som är en kopia av djuret dietcoachen vill mata
-        Djur tempDjur = hotell.getDjur(input);
-                
-        /*
-         Skapar en sträng med det vad valda djuret heter, hur mycket (och av 
-         vilken sorts) mat djuret ska med hjälp av metoden "getFoder".
-         Inkapsling i form av "get"-metoderna och polymorfism
-         */
-        String svar = tempDjur.getArt() + "en " + tempDjur.getNamn()
-                + " behöver " + tempDjur.getFoder(tempDjur) + "."; //POLYMORFISM
+            //Skapar ett djur som är en kopia av djuret dietcoachen vill mata
+            Djur tempDjur = hotell.getDjur(input);
 
-        //Skriver ut svaret
-        JOptionPane.showMessageDialog(null, svar);
-        
-        } catch (ArrayIndexOutOfBoundsException e){
+         //Inkapsling i form av "get"-metoderna och polymorfism
+            String svar = tempDjur.getArt() + "en " + tempDjur.getNamn()
+                    + " behöver " + tempDjur.getFoder(tempDjur) + "."; //POLYMORFISM
+
+            //Skriver ut svaret
+            JOptionPane.showMessageDialog(null, svar);
+
+        } catch (ArrayIndexOutOfBoundsException e) {
             JOptionPane.showMessageDialog(null, "Det djuret bor inte hos Healthy Pets");
         }
 

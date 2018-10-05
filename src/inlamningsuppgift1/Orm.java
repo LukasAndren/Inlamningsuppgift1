@@ -15,7 +15,7 @@ public class Orm extends Djur{
         super(vikt, namn, art);
     }
 
-    @Override
+    
     public String getFoder(Djur djur) {
         return 20 + " gram ormpellets";
     }

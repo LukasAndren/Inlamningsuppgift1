@@ -15,7 +15,7 @@ public class Hund extends Djur{
         super(vikt, namn, art);
     }
     
-    @Override
+    
     public String getFoder(Djur djur){
      return djur.getVikt() / 100 + " gram hundfoder";   
     }

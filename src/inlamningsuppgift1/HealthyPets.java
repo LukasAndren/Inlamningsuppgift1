@@ -36,7 +36,7 @@ public class HealthyPets {
     public Djur getDjur(String namn) {
 
         for (Djur djur : djur) {
-            if (djur.getNamn().equals(namn)) {
+            if (djur.getNamn().toLowerCase().equals(namn)) {
                 return djur;
             }
         }

@@ -15,7 +15,7 @@ public class Katt extends Djur {
         super(vikt, namn, art);
     }
 
-    @Override
+    
     public String getFoder(Djur djur) {
         return djur.getVikt() / 150 + " gram kattfoder";
     }
